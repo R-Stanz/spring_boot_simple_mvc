@@ -13,14 +13,15 @@
 
 ### Used Technologies:
 
-|Technology name|Version|
-|---|---|
-|Java JDK | 21 |
-|Spring Boot | |
-|Maven | |
-|PostgreSQL | |
-|Docker | |
-|PgAdmin | 4 | 
+| Technology Name |  Version  |
+| :-------------: | :-------: |
+| Java JDK        |     21    |
+| Spring Boot     |           |
+| Maven           |           |
+| PostgreSQL      |           |
+| Docker          |   27.0.3  |
+| PgAdmin         |     4     |
+
 
 <br>
 
@@ -40,23 +41,22 @@
 	* *Username* (**PK**)
 	* *Passphrase* (**char(68)**)
 
-<br>
-
 * **Roles:**
-	* *Username* (**FK**)
+	* *Username* (**FK**, **UK**)
 	* *Role* (**varchar(20)**, **UK**)
 	
 <br>
 
+
 ### Used Maven Packages:
 
-|Package name|Version|
-|---|---|
-| Spring Boot DevTools | |
-| Spring Web | |
-| Spring Data JPA | |
-| Spring Data JPA PostgreSQL |
-| Spring Security | |
+| 		Package name			| Version |
+| :------------------------:	| :-----: |
+| Spring Boot DevTools		| |
+| Spring Web 				| |
+| Spring Data JPA 			| |
+| Spring Data JPA PostgreSQL	| |
+| Spring Security 			| |
 
 <br>
 
@@ -67,3 +67,5 @@
 - [ ] Data Base User Population
 - [ ] Spring Boot Basic Encrypted Authentication
 - [ ] Spring Boot MVC Pages
+
+---
