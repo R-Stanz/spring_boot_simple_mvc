@@ -57,6 +57,23 @@
 
 <br>
 
+
+* ### Authentication Infos
+	
+	* It's enough the username and password
+	
+	* The default authentications have their infos equal to the table below:
+
+	|  Username	| Passphrase	| 		  Roles 			| Enabled |
+	| :--------:	| :--------:	| :--------------------:	| :-----: |
+	|    joe	   	|  crud123 	| president, worker 		|   true  |
+	|   donald	|  crud123 	| shareholder			|   true  |
+	|   harris	|  crud123 	| vice-president, worker	|   true  |
+	|   pence	|  crud123 	| client					|   true  |
+	
+<br>
+
+
 * ### Check-List
 	- [x] Read Me
 	- [x] Database Container
@@ -121,7 +138,8 @@
 				```
 				$ sudo docker-compose ps
 				```
-			The name of the containers can be found on the names and name columns, for the docker and docker-compose (respectively).
+				
+				The name of the containers can be found on the names and name columns, for the docker and docker-compose (respectively).
 	
 	
 * ### 2. Setup Authentication Tables
