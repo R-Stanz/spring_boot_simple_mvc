@@ -18,7 +18,7 @@
 	| Adminer Image					|	4.8.1   |
 	| Docker          				|   27.0.3  |
 	| Docker Compose    				|   2.28.1  |
-	| PG Admin        				|     4     |
+	| PG Admin 4      				|    8.9    |
 
 
 * ### For containers it is used the following distribution
@@ -110,6 +110,7 @@
 		
 		1. Open the <localhost:2222>, you are even going to able to modify the database using the default user, password and database I left on the docker compose file of the postgreSQL - postgres, test123 and simple_crud (respectively).
 		
+		
 		2. Check if the database is working and populated, by accessing and consulting the database:
 	
 		```
@@ -136,6 +137,22 @@
 		```
 		
 		* To get out of the interactive mode (the *psql*) you can use the combination of `ctrl` + `d`.
+		
+		
+		
+		3. Try to use the PGAdmin4 by opening the <localhost:8888>, it may take a while to load the service. 
+			1. Fill the PGAdmin4 fields as the image, the password is test123.<br>
+			![pg-0](img/pgadmin-0.png "PGAdmin4 Logging")
+			2. Select the add database options.
+			3. Fill the database configurations as the images bellow. <br>
+			![pg-1](img/pgadmin-1.png "General configurations")
+			![pg-2](img/pgadmin-2.png "Connection configurations")
+			4. Now you can try selecting the database query tool, you can get the result of the image by clicking with the right button on the database. <br>
+			![pg-3](img/pgadmin-3.png "Database options")
+			5. Try running the following thread, on the upper part of the image (`SELECT * FROM roles UNION SELECT username, passphrase FROM users ORDER BY username;`), and obtain the same result, at the bottom part of the image. <br>
+			![pg-4](img/pgadmin-4.png "Database options")
+
+
 
 * ### 2.
 

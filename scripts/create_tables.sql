@@ -1,4 +1,6 @@
+\c postgres
 DROP DATABASE IF EXISTS simple_crud;
+\c postgres
 CREATE DATABASE simple_crud
 	WITH
 		ENCODING = 'UTF8'
@@ -10,6 +12,7 @@ DROP TABLE IF EXISTS roles;
 DROP TABLE IF EXISTS users;
 
 
+SELECT 'simple_crud';
 \c simple_crud
 CREATE TABLE users (
         username varchar(25) NOT NULL,
