@@ -1,3 +1,4 @@
+# Use postgres/example user/password credentials
 version: '3.9'
 
 services:
@@ -9,18 +10,18 @@ services:
     shm_size: 128mb
     # or set shared memory limit when deploy via swarm stack
     volumes:
-      - ./scipts:/var/scripts
+      - ./scripts:/docker-entrypoint-initdb.d
     #  - type: tmpfs
     #    target: /dev/shm
     #    tmpfs:
     #      size: 134217728 # 128*2^20 bytes = 128Mb
     environment:
-      POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "test123"
-      POSTGRES_DB: "simple_crud"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: test123
+      POSTGRES_DB: simple_crud
 
   adminer:
-    image: adminer
+    image: adminer:4.8.1
     restart: always
     ports:
-      - 80:8080
+      - 2222:8080
